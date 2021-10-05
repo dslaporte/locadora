@@ -1,0 +1,24 @@
+{
+  "name": "locadora",
+  "version": "1.0.0",
+  "description": "Projeto de estudo de uma video locadora",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dslaporte/locadora.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/dslaporte/locadora/issues"
+  },
+  "homepage": "https://github.com/dslaporte/locadora#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
