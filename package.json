@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/dslaporte/locadora#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "http-status": "^1.5.0"
   }
 }
