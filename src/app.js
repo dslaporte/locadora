@@ -7,12 +7,13 @@
 const express = require('express')
 //importa as rotas
 const routes = require('./routes')
+const customerRoutes = require('./customers/customers-routes')
 //instanciando um novo servidor
 const app = express()
 //habilita o uso do json
 app.use(express.json())
 //importa as rotas para o servidor
-app.use('/', routes)
+app.use('/', [routes, customerRoutes])
 //crio uma constante para definir que porta o servidor rodará
 const port = 3000
 //listen: ouvir/escutar uma determinada porta
