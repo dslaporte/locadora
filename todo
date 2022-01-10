@@ -1,0 +1,14 @@
+- instalar nodemon
+- instalar modulo config para criar as configurações
+- instalar modulo dotenv para ler as config
+
+- instalar e configurar o eslint:
+
+    npx eslint --init
+
+
+- instalar sequelize, sequelize-cli, mysql2
+- criar conexão
+- criar model e migration
+- criar script
+- criar um crud

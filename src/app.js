@@ -1,22 +1,18 @@
-/*
-    Para importar libs ou arquivos, utiliza-se o comando require
-    () => executa um método
-*/
+const express = require('express');
+const customerRoutes = require('./person/person-routes');
+const productRoutes = require('./products/products-routes');
+const config = require('../config/default');
 
-//carrego a lib do express (servido da aplicação)
-const express = require('express')
-//importa as rotas
-const routes = require('./routes')
-const customerRoutes = require('./customers/customers-routes')
-//instanciando um novo servidor
-const app = express()
-//habilita o uso do json
-app.use(express.json())
-//importa as rotas para o servidor
-app.use('/', [routes, customerRoutes])
-//crio uma constante para definir que porta o servidor rodará
-const port = 3000
-//listen: ouvir/escutar uma determinada porta
-app.listen(port, function () {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+const { host, port } = config;
+
+const app = express();
+
+app.use(express.json());
+app.use('/', [
+  customerRoutes,
+  productRoutes,
+]);
+
+app.listen(port, () => {
+  console.log(`Example app listening at ${host}:${port}`);
+});
